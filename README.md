@@ -21,6 +21,8 @@ The roles remain maintained in their upstream repositories. This repository pins
 
 Install the collection from Ansible Galaxy with `ansible-galaxy collection install lvps.389ds`.
 
+The collection depends on `community.general`, which Ansible Galaxy installs automatically.
+
 Replication requires a running 389DS server. Apply the server role before the replication role and store all passwords in Ansible Vault or an external secret manager.
 
 ## Development

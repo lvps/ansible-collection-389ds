@@ -25,17 +25,23 @@ jobs:
       - name: Lint YAML
         run: yamllint galaxy.yml meta playbooks
 
-      - name: Lint Ansible
-        run: ansible-lint playbooks/verify-package.yml
-
       - name: Build collection
         run: ansible-galaxy collection build --force
 
-      - name: Install and syntax-check collection
+      - name: Install collection
         run: |
           mkdir -p "$RUNNER_TEMP/collections"
           ansible-galaxy collection install lvps-389ds-*.tar.gz -p "$RUNNER_TEMP/collections"
-          ANSIBLE_COLLECTIONS_PATH="$RUNNER_TEMP/collections" ansible-playbook --syntax-check playbooks/verify-package.yml
+
+      - name: Lint Ansible
+        env:
+          ANSIBLE_COLLECTIONS_PATH: ${{ runner.temp }}/collections
+        run: ansible-lint playbooks/verify-package.yml
+
+      - name: Syntax-check collection
+        env:
+          ANSIBLE_COLLECTIONS_PATH: ${{ runner.temp }}/collections
+        run: ansible-playbook --syntax-check playbooks/verify-package.yml
 
       - name: Upload collection artifact
         uses: actions/upload-artifact@v4
