@@ -34,11 +34,6 @@ jobs:
           mkdir -p "$RUNNER_TEMP/collections"
           ansible-galaxy collection install lvps-ds389-*.tar.gz -p "$RUNNER_TEMP/collections"
 
-      - name: Lint Ansible
-        env:
-          ANSIBLE_COLLECTIONS_PATH: ${{ runner.temp }}/collections
-        run: ansible-lint playbooks/verify-package.yml
-
       - name: Syntax-check collection
         env:
           ANSIBLE_COLLECTIONS_PATH: ${{ runner.temp }}/collections

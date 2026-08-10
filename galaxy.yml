@@ -35,3 +35,5 @@ build_ignore:
   - '**/.venv'
   - .ci-collections
   - '**/.ci-collections'
+  - .ansible
+  - '**/.ansible'

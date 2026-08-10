@@ -12,7 +12,7 @@ Before opening a pull request:
 	python -m pip install --upgrade pip
 	python -m pip install -r requirements.txt
 
-3. Run the lint and collection build commands used by CI. If a command is not found, confirm that `.venv/bin` is active rather than installing tools system-wide.
+3. Run the YAML lint and collection build commands used by CI. If a command is not found, confirm that `.venv/bin` is active rather than installing tools system-wide.
 4. Confirm that the submodule pointers reference released upstream tags.
 
 Collection releases are created from a GitHub release whose tag matches the version in `galaxy.yml`.
