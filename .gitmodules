@@ -1,0 +1,6 @@
+[submodule "roles/server"]
+	path = roles/server
+	url = https://github.com/lvps/389ds-server.git
+[submodule "roles/replication"]
+	path = roles/replication
+	url = https://github.com/lvps/389ds-replication.git

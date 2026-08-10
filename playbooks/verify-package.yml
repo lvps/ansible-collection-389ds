@@ -1,0 +1,8 @@
+---
+- name: Verify packaged roles
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - role: lvps.389ds.server
+    - role: lvps.389ds.replication

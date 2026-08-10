@@ -1,0 +1,7 @@
+---
+profile: production
+exclude_paths:
+  - roles/server/molecule/
+  - roles/replication/molecule/
+skip_list:
+  - galaxy[no-changelog]
