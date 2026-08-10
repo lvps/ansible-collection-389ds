@@ -4,5 +4,5 @@
   connection: local
   gather_facts: false
   roles:
-    - role: lvps.389ds.server
-    - role: lvps.389ds.replication
+    - role: lvps.ds389.server
+    - role: lvps.ds389.replication

@@ -1,6 +1,6 @@
 ---
 namespace: lvps
-name: 389ds
+name: ds389
 version: 1.0.0
 authors:
   - LVPS
@@ -31,3 +31,7 @@ build_ignore:
   - molecule
   - '**/molecule'
   - '*.retry'
+  - .venv
+  - '**/.venv'
+  - .ci-collections
+  - '**/.ci-collections'

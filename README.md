@@ -1,9 +1,9 @@
 # 389DS Ansible Collection
 
-The `lvps.389ds` collection packages the following upstream roles:
+The `lvps.ds389` collection packages the following upstream roles:
 
-- `lvps.389ds.server` — installs and configures a 389 Directory Server.
-- `lvps.389ds.replication` — configures replication between existing 389DS instances.
+- `lvps.ds389.server` — installs and configures a 389 Directory Server.
+- `lvps.ds389.replication` — configures replication between existing 389DS instances.
 
 The roles remain maintained in their upstream repositories. This repository pins released role revisions as Git submodules so collection builds are reproducible.
 
@@ -15,11 +15,11 @@ The roles remain maintained in their upstream repositories. This repository pins
   hosts: ldap_servers
   become: true
   roles:
-    - role: lvps.389ds.server
+    - role: lvps.ds389.server
       dirsrv_rootdn_password: "{{ vault_dirsrv_rootdn_password }}"
 ```
 
-Install the collection from Ansible Galaxy with `ansible-galaxy collection install lvps.389ds`.
+Install the collection from Ansible Galaxy with `ansible-galaxy collection install lvps.ds389`.
 
 The collection depends on `community.general`, which Ansible Galaxy installs automatically.
 
