@@ -1,6 +1,6 @@
 ---
 namespace: lvps
-name: ds389
+name: ldap_389ds
 version: 1.0.0
 authors:
   - LVPS
