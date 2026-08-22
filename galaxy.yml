@@ -1,0 +1,39 @@
+---
+namespace: lvps
+name: ldap_389ds
+version: 1.0.0
+authors:
+  - LVPS
+description: Ansible collection for installing and configuring 389 Directory Server.
+readme: README.md
+license:
+  - Apache-2.0
+  - MIT
+tags:
+  - ldap
+  - 389ds
+  - directory
+repository: https://github.com/lvps/ansible-collection-389ds
+issues: https://github.com/lvps/ansible-collection-389ds/issues
+dependencies:
+  community.general: '>=9.0.0'
+build_ignore:
+  - .git
+  - '**/.git'
+  - .github
+  - '**/.github'
+  - .gitmodules
+  - .ansible-lint
+  - .yamllint
+  - constraint.txt
+  - requirements.txt
+  - plan.md
+  - molecule
+  - '**/molecule'
+  - '*.retry'
+  - .venv
+  - '**/.venv'
+  - .ci-collections
+  - '**/.ci-collections'
+  - .ansible
+  - '**/.ansible'
