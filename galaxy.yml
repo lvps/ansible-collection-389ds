@@ -1,9 +1,9 @@
 ---
 namespace: lvps
 name: ldap_389ds
-version: 1.0.0
+version: 1.0.2
 authors:
-  - LVPS
+  - lvps
 description: Ansible collection for installing and configuring 389 Directory Server.
 readme: README.md
 license:
