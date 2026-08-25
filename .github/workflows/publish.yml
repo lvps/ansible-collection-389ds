@@ -36,6 +36,4 @@ jobs:
         run: ansible-galaxy collection build --force
 
       - name: Publish collection
-        env:
-          ANSIBLE_GALAXY_SERVER_GALAXY_TOKEN: ${{ secrets.ANSIBLE_GALAXY_API_KEY }}
-        run: ansible-galaxy collection publish lvps-ldap_389ds-*.tar.gz
+        run: ansible-galaxy collection publish lvps-ldap_389ds-*.tar.gz --api-key ${{ secrets.ANSIBLE_GALAXY_API_KEY }}
